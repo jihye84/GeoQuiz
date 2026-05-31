@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1278,
+          51.5074
+        ]
+      },
+      "properties": {
+        "code": "LON",
+        "name_ko": "런던",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1883,
+          55.9533
+        ]
+      },
+      "properties": {
+        "code": "EDI",
+        "name_ko": "에든버러",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2426,
+          53.4808
+        ]
+      },
+      "properties": {
+        "code": "MAN",
+        "name_ko": "맨체스터",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9916,
+          53.4084
+        ]
+      },
+      "properties": {
+        "code": "LIV",
+        "name_ko": "리버풀",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2518,
+          55.8642
+        ]
+      },
+      "properties": {
+        "code": "GLA",
+        "name_ko": "글래스고",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1791,
+          51.4816
+        ]
+      },
+      "properties": {
+        "code": "CDF",
+        "name_ko": "카디프",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9301,
+          54.5973
+        ]
+      },
+      "properties": {
+        "code": "BFS",
+        "name_ko": "벨파스트",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2577,
+          51.752
+        ]
+      },
+      "properties": {
+        "code": "OXF",
+        "name_ko": "옥스퍼드",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1218,
+          52.2053
+        ]
+      },
+      "properties": {
+        "code": "CAM",
+        "name_ko": "케임브리지",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8904,
+          52.4862
+        ]
+      },
+      "properties": {
+        "code": "BHX",
+        "name_ko": "버밍엄",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0815,
+          53.959
+        ]
+      },
+      "properties": {
+        "code": "YOR",
+        "name_ko": "요크",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8262,
+          51.1789
+        ]
+      },
+      "properties": {
+        "code": "STH",
+        "name_ko": "스톤헨지",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3599,
+          51.3758
+        ]
+      },
+      "properties": {
+        "code": "BTH",
+        "name_ko": "바스",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4701,
+          53.3811
+        ]
+      },
+      "properties": {
+        "code": "SHF",
+        "name_ko": "셰필드",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5879,
+          51.4545
+        ]
+      },
+      "properties": {
+        "code": "BRS",
+        "name_ko": "브리스틀",
+        "isQuizRegion": true
+      }
+    }
+  ]
+}

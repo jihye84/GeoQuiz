@@ -1,0 +1,305 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6917,
+          35.6895
+        ]
+      },
+      "properties": {
+        "code": "TYO",
+        "name_ko": "도쿄",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.5023,
+          34.6937
+        ]
+      },
+      "properties": {
+        "code": "OSA",
+        "name_ko": "오사카",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7681,
+          35.0116
+        ]
+      },
+      "properties": {
+        "code": "KYO",
+        "name_ko": "교토",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.3545,
+          43.0618
+        ]
+      },
+      "properties": {
+        "code": "CTS",
+        "name_ko": "삿포로",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4017,
+          33.5902
+        ]
+      },
+      "properties": {
+        "code": "FUK",
+        "name_ko": "후쿠오카",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9066,
+          35.1815
+        ]
+      },
+      "properties": {
+        "code": "NGO",
+        "name_ko": "나고야",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.638,
+          35.4437
+        ]
+      },
+      "properties": {
+        "code": "YOK",
+        "name_ko": "요코하마",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.1955,
+          34.6901
+        ]
+      },
+      "properties": {
+        "code": "UKB",
+        "name_ko": "고베",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.8694,
+          38.2682
+        ]
+      },
+      "properties": {
+        "code": "SDJ",
+        "name_ko": "센다이",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4553,
+          34.3853
+        ]
+      },
+      "properties": {
+        "code": "HIJ",
+        "name_ko": "히로시마",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6809,
+          26.2124
+        ]
+      },
+      "properties": {
+        "code": "OKA",
+        "name_ko": "나하",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.8777,
+          32.7503
+        ]
+      },
+      "properties": {
+        "code": "NGS",
+        "name_ko": "나가사키",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.6562,
+          36.5613
+        ]
+      },
+      "properties": {
+        "code": "KMQ",
+        "name_ko": "가나자와",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8048,
+          34.6851
+        ]
+      },
+      "properties": {
+        "code": "NRA",
+        "name_ko": "나라",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.0364,
+          37.9161
+        ]
+      },
+      "properties": {
+        "code": "KIJ",
+        "name_ko": "니가타",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.3828,
+          34.9756
+        ]
+      },
+      "properties": {
+        "code": "FSZ",
+        "name_ko": "시즈오카",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.5571,
+          31.5966
+        ]
+      },
+      "properties": {
+        "code": "KOJ",
+        "name_ko": "가고시마",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.7653,
+          33.8392
+        ]
+      },
+      "properties": {
+        "code": "MYJ",
+        "name_ko": "마쓰야마",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.0434,
+          34.3401
+        ]
+      },
+      "properties": {
+        "code": "TAK",
+        "name_ko": "다카마쓰",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.7288,
+          41.7687
+        ]
+      },
+      "properties": {
+        "code": "HKD",
+        "name_ko": "하코다테",
+        "isQuizRegion": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4074,
+          39.9042
+        ]
+      },
+      "properties": {
+        "code": "PEK",
+        "name_ko": "베이징",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4737,
+          31.2304
+        ]
+      },
+      "properties": {
+        "code": "PVG",
+        "name_ko": "상하이",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.2644,
+          23.1291
+        ]
+      },
+      "properties": {
+        "code": "CAN",
+        "name_ko": "광저우",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.0579,
+          22.5431
+        ]
+      },
+      "properties": {
+        "code": "SZX",
+        "name_ko": "선전",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.0668,
+          30.5728
+        ]
+      },
+      "properties": {
+        "code": "CTU",
+        "name_ko": "청두",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5516,
+          29.563
+        ]
+      },
+      "properties": {
+        "code": "CKG",
+        "name_ko": "충칭",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.9398,
+          34.3416
+        ]
+      },
+      "properties": {
+        "code": "XIY",
+        "name_ko": "시안",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1551,
+          30.2741
+        ]
+      },
+      "properties": {
+        "code": "HGH",
+        "name_ko": "항저우",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.3055,
+          30.5928
+        ]
+      },
+      "properties": {
+        "code": "WUH",
+        "name_ko": "우한",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7969,
+          32.0603
+        ]
+      },
+      "properties": {
+        "code": "NKG",
+        "name_ko": "난징",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.201,
+          39.0842
+        ]
+      },
+      "properties": {
+        "code": "TSN",
+        "name_ko": "톈진",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3826,
+          36.0671
+        ]
+      },
+      "properties": {
+        "code": "TAO",
+        "name_ko": "칭다오",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.0894,
+          24.4798
+        ]
+      },
+      "properties": {
+        "code": "XMN",
+        "name_ko": "샤먼",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6148,
+          38.914
+        ]
+      },
+      "properties": {
+        "code": "DLC",
+        "name_ko": "다롄",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.535,
+          45.8038
+        ]
+      },
+      "properties": {
+        "code": "HRB",
+        "name_ko": "하얼빈",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.9388,
+          28.2282
+        ]
+      },
+      "properties": {
+        "code": "CSX",
+        "name_ko": "창사",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.6253,
+          34.7466
+        ]
+      },
+      "properties": {
+        "code": "CGO",
+        "name_ko": "정저우",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.71,
+          25.0453
+        ]
+      },
+      "properties": {
+        "code": "KMG",
+        "name_ko": "쿤밍",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.6168,
+          43.8256
+        ]
+      },
+      "properties": {
+        "code": "URC",
+        "name_ko": "우루무치",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.1167,
+          29.65
+        ]
+      },
+      "properties": {
+        "code": "LXA",
+        "name_ko": "라싸",
+        "isQuizRegion": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,965 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.2437,
+          34.0522
+        ]
+      },
+      "properties": {
+        "code": "LAX",
+        "name_ko": "로스앤젤레스",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4194,
+          37.7749
+        ]
+      },
+      "properties": {
+        "code": "SFO",
+        "name_ko": "샌프란시스코",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3321,
+          47.6062
+        ]
+      },
+      "properties": {
+        "code": "SEA",
+        "name_ko": "시애틀",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.1398,
+          36.1699
+        ]
+      },
+      "properties": {
+        "code": "LAS",
+        "name_ko": "라스베이거스",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.9903,
+          39.7392
+        ]
+      },
+      "properties": {
+        "code": "DEN",
+        "name_ko": "덴버",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.074,
+          33.4484
+        ]
+      },
+      "properties": {
+        "code": "PHX",
+        "name_ko": "피닉스",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.1611,
+          32.7157
+        ]
+      },
+      "properties": {
+        "code": "SAN",
+        "name_ko": "샌디에이고",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.675,
+          45.5051
+        ]
+      },
+      "properties": {
+        "code": "PDX",
+        "name_ko": "포틀랜드",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.891,
+          40.7608
+        ]
+      },
+      "properties": {
+        "code": "SLC",
+        "name_ko": "솔트레이크시티",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.8583,
+          21.3069
+        ]
+      },
+      "properties": {
+        "code": "HNL",
+        "name_ko": "호놀룰루",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.9003,
+          61.2181
+        ]
+      },
+      "properties": {
+        "code": "ANC",
+        "name_ko": "앵커리지",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8863,
+          37.3382
+        ]
+      },
+      "properties": {
+        "code": "SJC",
+        "name_ko": "산호세",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.4944,
+          38.5816
+        ]
+      },
+      "properties": {
+        "code": "SMF",
+        "name_ko": "새크라멘토",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9747,
+          32.2226
+        ]
+      },
+      "properties": {
+        "code": "TUS",
+        "name_ko": "투손",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.6504,
+          35.0844
+        ]
+      },
+      "properties": {
+        "code": "ABQ",
+        "name_ko": "앨버커키",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.2023,
+          43.615
+        ]
+      },
+      "properties": {
+        "code": "BOI",
+        "name_ko": "보이시",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.8138,
+          39.5296
+        ]
+      },
+      "properties": {
+        "code": "RNO",
+        "name_ko": "리노",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.8214,
+          38.8339
+        ]
+      },
+      "properties": {
+        "code": "COS",
+        "name_ko": "콜로라도스프링스",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.9378,
+          35.687
+        ]
+      },
+      "properties": {
+        "code": "SFE",
+        "name_ko": "산타페",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.7871,
+          36.7378
+        ]
+      },
+      "properties": {
+        "code": "FAT",
+        "name_ko": "프레즈노",
+        "region": "west",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6298,
+          41.8781
+        ]
+      },
+      "properties": {
+        "code": "ORD",
+        "name_ko": "시카고",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.3698,
+          29.7604
+        ]
+      },
+      "properties": {
+        "code": "IAH",
+        "name_ko": "휴스턴",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.797,
+          32.7767
+        ]
+      },
+      "properties": {
+        "code": "DFW",
+        "name_ko": "댈러스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7431,
+          30.2672
+        ]
+      },
+      "properties": {
+        "code": "AUS",
+        "name_ko": "오스틴",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.4936,
+          29.4241
+        ]
+      },
+      "properties": {
+        "code": "SAT",
+        "name_ko": "샌안토니오",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.265,
+          44.9778
+        ]
+      },
+      "properties": {
+        "code": "MSP",
+        "name_ko": "미니애폴리스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.1994,
+          38.627
+        ]
+      },
+      "properties": {
+        "code": "STL",
+        "name_ko": "세인트루이스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5786,
+          39.0997
+        ]
+      },
+      "properties": {
+        "code": "MCI",
+        "name_ko": "캔자스시티",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.0715,
+          29.9511
+        ]
+      },
+      "properties": {
+        "code": "MSY",
+        "name_ko": "뉴올리언스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.049,
+          35.1495
+        ]
+      },
+      "properties": {
+        "code": "MEM",
+        "name_ko": "멤피스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.7816,
+          36.1627
+        ]
+      },
+      "properties": {
+        "code": "BNA",
+        "name_ko": "내슈빌",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.1581,
+          39.7684
+        ]
+      },
+      "properties": {
+        "code": "IND",
+        "name_ko": "인디애나폴리스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6944,
+          41.4993
+        ]
+      },
+      "properties": {
+        "code": "CLE",
+        "name_ko": "클리블랜드",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.512,
+          39.1031
+        ]
+      },
+      "properties": {
+        "code": "CVG",
+        "name_ko": "신시내티",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.0007,
+          39.9612
+        ]
+      },
+      "properties": {
+        "code": "CMH",
+        "name_ko": "콜럼버스",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9065,
+          43.0389
+        ]
+      },
+      "properties": {
+        "code": "MKE",
+        "name_ko": "밀워키",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.9345,
+          41.2565
+        ]
+      },
+      "properties": {
+        "code": "OMA",
+        "name_ko": "오마하",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.5164,
+          35.4676
+        ]
+      },
+      "properties": {
+        "code": "OKC",
+        "name_ko": "오클라호마시티",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.9928,
+          36.154
+        ]
+      },
+      "properties": {
+        "code": "TUL",
+        "name_ko": "털사",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.625,
+          41.5868
+        ]
+      },
+      "properties": {
+        "code": "DSM",
+        "name_ko": "디모인",
+        "region": "central",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7128
+        ]
+      },
+      "properties": {
+        "code": "JFK",
+        "name_ko": "뉴욕",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0369,
+          38.9072
+        ]
+      },
+      "properties": {
+        "code": "DCA",
+        "name_ko": "워싱턴 D.C.",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0589,
+          42.3601
+        ]
+      },
+      "properties": {
+        "code": "BOS",
+        "name_ko": "보스턴",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1918,
+          25.7617
+        ]
+      },
+      "properties": {
+        "code": "MIA",
+        "name_ko": "마이애미",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.388,
+          33.749
+        ]
+      },
+      "properties": {
+        "code": "ATL",
+        "name_ko": "애틀랜타",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1652,
+          39.9526
+        ]
+      },
+      "properties": {
+        "code": "PHL",
+        "name_ko": "필라델피아",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3792,
+          28.5383
+        ]
+      },
+      "properties": {
+        "code": "MCO",
+        "name_ko": "올랜도",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8431,
+          35.2271
+        ]
+      },
+      "properties": {
+        "code": "CLT",
+        "name_ko": "샬럿",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.9959,
+          40.4406
+        ]
+      },
+      "properties": {
+        "code": "PIT",
+        "name_ko": "피츠버그",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6122,
+          39.2904
+        ]
+      },
+      "properties": {
+        "code": "BWI",
+        "name_ko": "볼티모어",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.6382,
+          35.7796
+        ]
+      },
+      "properties": {
+        "code": "RDU",
+        "name_ko": "롤리",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.436,
+          37.5407
+        ]
+      },
+      "properties": {
+        "code": "RIC",
+        "name_ko": "리치먼드",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.4572,
+          27.9506
+        ]
+      },
+      "properties": {
+        "code": "TPA",
+        "name_ko": "탬파",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.9311,
+          32.7765
+        ]
+      },
+      "properties": {
+        "code": "CHS",
+        "name_ko": "찰스턴",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.0912,
+          32.0809
+        ]
+      },
+      "properties": {
+        "code": "SAV",
+        "name_ko": "서배너",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4128,
+          41.824
+        ]
+      },
+      "properties": {
+        "code": "PVD",
+        "name_ko": "프로비던스",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.6734,
+          41.7658
+        ]
+      },
+      "properties": {
+        "code": "HFD",
+        "name_ko": "하트퍼드",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8784,
+          42.8864
+        ]
+      },
+      "properties": {
+        "code": "BUF",
+        "name_ko": "버펄로",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6557,
+          30.3322
+        ]
+      },
+      "properties": {
+        "code": "JAX",
+        "name_ko": "잭슨빌",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1057,
+          18.4655
+        ]
+      },
+      "properties": {
+        "code": "SJU",
+        "name_ko": "산후안",
+        "region": "east",
+        "isQuizRegion": true
+      }
+    }
+  ]
+}

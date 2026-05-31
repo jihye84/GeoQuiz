@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🌍 지오그래피 퀴즈</title>
+    <meta name="description" content="대한민국 시군구의 이름과 위치를 학습하는 인터랙티브 퀴즈 앱">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <div style="color: white; font-size: 18px;">지도 데이터를 불러오는 중...</div>
+    </div>
+
+    <!-- Header -->
+    <header id="app-header">
+        <div class="header-left">
+            <button id="sidebar-toggle" aria-label="사이드바 열기">☰</button>
+            <h1 id="app-title">🌍 지오그래피 퀴즈</h1>
+            <button id="country-change-btn" class="btn" style="margin-left: 10px; font-size: 14px; padding: 6px 10px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; color: white; cursor: pointer;">변경</button>
+        </div>
+        <div class="header-center">
+            <span id="current-province-name">시도를 선택하세요</span>
+        </div>
+        <div class="header-right">
+            <div class="stat-box" id="score-box">
+                <span class="stat-label">정답</span>
+                <span class="stat-value" id="score-text">0 / 0</span>
+            </div>
+            <div class="stat-box" id="timer-box">
+                <span class="stat-label">시간</span>
+                <span class="stat-value" id="timer-text">00:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div id="main-container">
+        <!-- Sidebar: Province Selection -->
+        <aside id="province-sidebar" class="open">
+            <div class="sidebar-header">
+                <h2 id="sidebar-title">지역 선택</h2>
+                <button id="sidebar-close" aria-label="닫기">✕</button>
+            </div>
+            <div id="province-list"></div>
+        </aside>
+
+        <!-- Sidebar Overlay (mobile/tablet) -->
+        <div id="sidebar-overlay"></div>
+
+        <!-- Map Area -->
+        <main id="map-area">
+            <div id="map-container">
+                <svg id="map-svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <filter id="glow-strong">
+                            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g id="map-group">
+                        <g id="municipalities-layer"></g>
+                        <g id="provinces-fill-layer"></g>
+                        <g id="provinces-layer"></g>
+                        <g id="labels-layer"></g>
+                    </g>
+                </svg>
+                <!-- Map Tooltip -->
+                <div id="map-tooltip" class="hidden"></div>
+                <!-- Zoom Controls -->
+                <div id="zoom-controls">
+                    <button id="zoom-in-btn" class="zoom-btn" aria-label="확대">＋</button>
+                    <button id="zoom-out-btn" class="zoom-btn" aria-label="축소">－</button>
+                    <div class="zoom-divider"></div>
+                    <button id="zoom-reset-btn" class="zoom-btn zoom-btn-text" aria-label="전체보기">전체</button>
+                </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div id="progress-container">
+                <div id="progress-track">
+                    <div id="progress-bar"></div>
+                </div>
+                <span id="progress-text">0%</span>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bottom: Capsules Area -->
+    <div id="capsules-area">
+        <div id="capsules-instruction" class="hidden">
+            <span>👆 아래 이름을 터치한 후, 지도에서 해당 위치를 터치하세요</span>
+        </div>
+        <div id="capsules-container"></div>
+    </div>
+
+    <!-- Info Popup Card (shown after correct match) -->
+    <div id="info-popup" class="info-popup hidden">
+        <div class="info-popup-card">
+            <div class="info-popup-color-bar" id="info-popup-color-bar"></div>
+            <div class="info-popup-body">
+                <h3 class="info-popup-name" id="info-popup-name"></h3>
+                <p class="info-popup-desc" id="info-popup-desc"></p>
+                <div class="info-popup-speaker">🔊 읽는 중...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating "View Results" button (after completion) -->
+    <button id="view-results-btn" class="view-results-btn hidden">🎉 완성! 결과 보기</button>
+
+    <!-- Completion Modal -->
+    <div id="completion-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2>축하합니다!</h2>
+            <p id="completion-message"></p>
+            <div class="modal-stars" id="modal-stars"></div>
+            <div class="modal-buttons">
+                <button id="retry-btn" class="btn btn-secondary">🔄 다시 도전</button>
+                <button id="next-province-btn" class="btn btn-primary">➡️ 다음 시도</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Country Selector Modal -->
+    <div id="country-selector" class="modal">
+        <div class="modal-content country-select">
+            <div class="modal-icon">🌍</div>
+            <h2>지오그래피 퀴즈</h2>
+            <p class="welcome-desc">학습할 국가를 선택하세요</p>
+            <div class="country-grid">
+                <button class="country-card" data-country="korea">
+                    <span class="country-emoji">🇰🇷</span>
+                    <span class="country-name">대한민국</span>
+                    <span class="country-detail">시군구</span>
+                </button>
+                <button class="country-card" data-country="usa">
+                    <span class="country-emoji">🇺🇸</span>
+                    <span class="country-name">미국</span>
+                    <span class="country-detail">50개 주</span>
+                </button>
+                <button class="country-card" data-country="uk">
+                    <span class="country-emoji">🇬🇧</span>
+                    <span class="country-name">영국</span>
+                    <span class="country-detail">주요 도시</span>
+                </button>
+                <button class="country-card" data-country="germany">
+                    <span class="country-emoji">🇩🇪</span>
+                    <span class="country-name">독일</span>
+                    <span class="country-detail">연방주 및 역사 도시</span>
+                </button>
+                <button class="country-card" data-country="japan">
+                    <span class="country-emoji">🇯🇵</span>
+                    <span class="country-name">일본</span>
+                    <span class="country-detail">20대 도시</span>
+                </button>
+                <button class="country-card" data-country="china">
+                    <span class="country-emoji">🇨🇳</span>
+                    <span class="country-name">중국</span>
+                    <span class="country-detail">20대 도시</span>
+                </button>
+                <button class="country-card" data-country="france">
+                    <span class="country-emoji">🇫🇷</span>
+                    <span class="country-name">프랑스</span>
+                    <span class="country-detail">20대 도시</span>
+                </button>
+                <button class="country-card" data-country="spain">
+                    <span class="country-emoji">🇪🇸</span>
+                    <span class="country-name">스페인</span>
+                    <span class="country-detail">15대 도시</span>
+                </button>
+                <button class="country-card" data-country="italy">
+                    <span class="country-emoji">🇮🇹</span>
+                    <span class="country-name">이탈리아</span>
+                    <span class="country-detail">15대 도시</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="engine.js?v=2"></script>
+</body>
+</html>

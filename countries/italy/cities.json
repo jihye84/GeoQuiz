@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4964,
+          41.9028
+        ]
+      },
+      "properties": {
+        "code": "ROM",
+        "name_ko": "로마",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19,
+          45.4642
+        ]
+      },
+      "properties": {
+        "code": "MIL",
+        "name_ko": "밀라노",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.3155,
+          45.4408
+        ]
+      },
+      "properties": {
+        "code": "VCE",
+        "name_ko": "베네치아",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2558,
+          43.7696
+        ]
+      },
+      "properties": {
+        "code": "FLR",
+        "name_ko": "피렌체",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2681,
+          40.8518
+        ]
+      },
+      "properties": {
+        "code": "NAP",
+        "name_ko": "나폴리",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.9463,
+          44.4056
+        ]
+      },
+      "properties": {
+        "code": "GOA",
+        "name_ko": "제노바",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.6869,
+          45.0703
+        ]
+      },
+      "properties": {
+        "code": "TRN",
+        "name_ko": "토리노",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3426,
+          44.4949
+        ]
+      },
+      "properties": {
+        "code": "BLQ",
+        "name_ko": "볼로냐",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9916,
+          45.4384
+        ]
+      },
+      "properties": {
+        "code": "VRN",
+        "name_ko": "베로나",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3615,
+          38.1157
+        ]
+      },
+      "properties": {
+        "code": "PMO",
+        "name_ko": "팔레르모",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.083,
+          37.5079
+        ]
+      },
+      "properties": {
+        "code": "CTA",
+        "name_ko": "카타니아",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1116,
+          39.2238
+        ]
+      },
+      "properties": {
+        "code": "CAG",
+        "name_ko": "칼리아리",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.8719,
+          41.1171
+        ]
+      },
+      "properties": {
+        "code": "BRI",
+        "name_ko": "바리",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.4017,
+          43.7228
+        ]
+      },
+      "properties": {
+        "code": "PSA",
+        "name_ko": "피사",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3308,
+          43.3188
+        ]
+      },
+      "properties": {
+        "code": "SAY",
+        "name_ko": "시에나",
+        "isQuizRegion": true
+      }
+    }
+  ]
+}

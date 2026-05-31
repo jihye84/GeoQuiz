@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7038,
+          40.4168
+        ]
+      },
+      "properties": {
+        "code": "MAD",
+        "name_ko": "마드리드",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1734,
+          41.3851
+        ]
+      },
+      "properties": {
+        "code": "BCN",
+        "name_ko": "바르셀로나",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3763,
+          39.4699
+        ]
+      },
+      "properties": {
+        "code": "VLC",
+        "name_ko": "발렌시아",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9845,
+          37.3891
+        ]
+      },
+      "properties": {
+        "code": "SVQ",
+        "name_ko": "세비야",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8891,
+          41.6488
+        ]
+      },
+      "properties": {
+        "code": "ZAZ",
+        "name_ko": "사라고사",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.4214,
+          36.7213
+        ]
+      },
+      "properties": {
+        "code": "AGP",
+        "name_ko": "말라가",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1307,
+          37.9922
+        ]
+      },
+      "properties": {
+        "code": "MUR",
+        "name_ko": "무르시아",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6502,
+          39.5696
+        ]
+      },
+      "properties": {
+        "code": "PMI",
+        "name_ko": "팔마",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.4363,
+          28.1235
+        ]
+      },
+      "properties": {
+        "code": "LPA",
+        "name_ko": "라스팔마스",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.935,
+          43.263
+        ]
+      },
+      "properties": {
+        "code": "BIO",
+        "name_ko": "빌바오",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.481,
+          38.3452
+        ]
+      },
+      "properties": {
+        "code": "ALC",
+        "name_ko": "알리칸테",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7794,
+          37.8882
+        ]
+      },
+      "properties": {
+        "code": "ODB",
+        "name_ko": "코르도바",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5986,
+          37.1773
+        ]
+      },
+      "properties": {
+        "code": "GRX",
+        "name_ko": "그라나다",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.0273,
+          39.8628
+        ]
+      },
+      "properties": {
+        "code": "TLD",
+        "name_ko": "톨레도",
+        "isQuizRegion": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5448,
+          42.8782
+        ]
+      },
+      "properties": {
+        "code": "SCQ",
+        "name_ko": "산티아고 데 콤포스텔라",
+        "isQuizRegion": true
+      }
+    }
+  ]
+}
