@@ -12,43 +12,7 @@ var COUNTRY_CONFIG = {
     dataFiles: {
         regions: 'countries/uk/cities.json',
         baseRegions: 'countries/uk/regions.json',
-            // 모드 (난이도) 설정
-    modes: [
-        {
-            id: 'top5',
-            label: '이지 모드 (핵심 5대 도시)',
-            hierarchy: {
-                hasProvinces: false,
-                provinceCodeDigits: 0,
-                regionCodeField: 'code', 
-                regionNameField: 'name_ko',
-                filter: (f) => f.properties.isTop5 === true
-            },
-            labels: {
-                sidebarTitle: '핵심 5대 도시',
-                quizUnit: '개 도시',
-                nationwideLabel: '핵심 5대 도시',
-            }
-        },
-        {
-            id: 'all',
-            label: '전체 모드 (전체 도시)',
-            hierarchy: {
-                hasProvinces: false,
-                provinceCodeDigits: 0,
-                regionCodeField: 'code', 
-                regionNameField: 'name_ko',
-                filter: (f) => f.properties.isQuizRegion === true
-            },
-            labels: {
-                sidebarTitle: '전체 도시',
-                quizUnit: '개 도시',
-                nationwideLabel: '전체 도시',
-            }
-        }
-    ],
-
-    provinces: null,
+        provinces: null,
         descriptions: 'countries/uk/descriptions.js',
     },
     
@@ -56,43 +20,7 @@ var COUNTRY_CONFIG = {
     topoConfig: {
         regions: null,
         baseRegions: null,
-            // 모드 (난이도) 설정
-    modes: [
-        {
-            id: 'top5',
-            label: '이지 모드 (핵심 5대 도시)',
-            hierarchy: {
-                hasProvinces: false,
-                provinceCodeDigits: 0,
-                regionCodeField: 'code', 
-                regionNameField: 'name_ko',
-                filter: (f) => f.properties.isTop5 === true
-            },
-            labels: {
-                sidebarTitle: '핵심 5대 도시',
-                quizUnit: '개 도시',
-                nationwideLabel: '핵심 5대 도시',
-            }
-        },
-        {
-            id: 'all',
-            label: '전체 모드 (전체 도시)',
-            hierarchy: {
-                hasProvinces: false,
-                provinceCodeDigits: 0,
-                regionCodeField: 'code', 
-                regionNameField: 'name_ko',
-                filter: (f) => f.properties.isQuizRegion === true
-            },
-            labels: {
-                sidebarTitle: '전체 도시',
-                quizUnit: '개 도시',
-                nationwideLabel: '전체 도시',
-            }
-        }
-    ],
-
-    provinces: null,
+        provinces: null,
     },
     
     // 지역 계층 구조

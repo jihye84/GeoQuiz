@@ -18,6 +18,10 @@ var COUNTRY_CONFIG = {
                 descriptions: 'countries/germany/cities-descriptions.js',
                 provinces: null
             },
+            topoConfig: {
+                regions: null,
+                provinces: null
+            },
             hierarchy: {
                 hasProvinces: false,
                 provinceCodeDigits: 0,

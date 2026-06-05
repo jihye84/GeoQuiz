@@ -12,10 +12,19 @@ var COUNTRY_CONFIG = {
         {
             id: 'top5',
             label: '이지 모드 (핵심 5개 주)',
+            dataFiles: {
+                regions: 'countries/usa/states.json',
+                provinces: null,
+                descriptions: 'countries/usa/descriptions.js',
+            },
+            topoConfig: {
+                regions: { objectName: 'states' },
+                provinces: null,
+            },
             hierarchy: {
                 hasProvinces: false,
                 provinceCodeDigits: 0,
-                regionCodeField: 'name', 
+                regionCodeField: 'code', 
                 regionNameField: 'name_ko',
                 filter: (f) => f.properties.isTop5 === true
             },
