@@ -35,7 +35,7 @@ var COUNTRY_CONFIG = {
     // UI 라벨
     labels: {
         sidebarTitle: '일본 주요 도시 퀴즈',
-        quizUnit: '개 도시',
+        quizUnit: '도시',
         nationwideLabel: '일본 20대 도시',
     },
     
@@ -53,7 +53,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '핵심 5대 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '핵심 5대 도시',
             }
         },
@@ -69,7 +69,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '20대 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '20대 도시',
             }
         }

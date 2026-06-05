@@ -32,7 +32,7 @@ var COUNTRY_CONFIG = {
     // UI 라벨
     labels: {
         sidebarTitle: '시도 선택',
-        quizUnit: '개 시군구',
+        quizUnit: '시군구',
         nationwideLabel: '전국 시도',
     },
     

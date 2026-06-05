@@ -33,7 +33,7 @@ var COUNTRY_CONFIG = {
     // UI 라벨
     labels: {
         sidebarTitle: '아프리카 대륙 퀴즈',
-        quizUnit: '개 국가',
+        quizUnit: '국가',
         nationwideLabel: '아프리카 대륙',
     },
     
@@ -51,7 +51,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '아프리카 주요 10개국',
-                quizUnit: '개 국가',
+                quizUnit: '국가',
                 nationwideLabel: '아프리카 10개국',
             }
         },
@@ -67,7 +67,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '아프리카 주요 25개국',
-                quizUnit: '개 국가',
+                quizUnit: '국가',
                 nationwideLabel: '아프리카 25개국',
             }
         },
@@ -83,7 +83,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '아프리카 전체 54개국',
-                quizUnit: '개 국가',
+                quizUnit: '국가',
                 nationwideLabel: '아프리카 전체',
             }
         }

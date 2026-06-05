@@ -39,7 +39,7 @@ for country in TARGETS:
             }},
             labels: {{
                 sidebarTitle: '미국 핵심 5개 주',
-                quizUnit: '개 주',
+                quizUnit: '주',
                 nationwideLabel: '핵심 5개 주',
             }}
         }},
@@ -66,7 +66,7 @@ for country in TARGETS:
             }},
             labels: {{
                 sidebarTitle: '독일 핵심 5대 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '핵심 5대 도시',
             }}
         }},

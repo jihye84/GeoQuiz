@@ -32,7 +32,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '미국 핵심 5개 주',
-                quizUnit: '개 주',
+                quizUnit: '주',
                 nationwideLabel: '핵심 5개 주',
             }
         },
@@ -56,7 +56,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '미국 주',
-                quizUnit: '개 주',
+                quizUnit: '주',
                 nationwideLabel: '전체 50개 주',
             },
             provinces: null
@@ -84,7 +84,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '미국 서부 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '서부 주요 도시',
             },
             provinces: null
@@ -112,7 +112,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '미국 중부 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '중부 주요 도시',
             },
             provinces: null
@@ -140,7 +140,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '미국 동부 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '동부 주요 도시',
             },
             provinces: null

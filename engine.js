@@ -753,7 +753,7 @@ function selectProvince(provinceCode) {
     );
 
     document.getElementById('current-province-name').textContent =
-        `${provInfo.name} (${state.currentRegions.length} ${COUNTRY_CONFIG.labels.quizUnit})`;
+        `${provInfo.name} (${state.currentRegions.length}개 ${COUNTRY_CONFIG.labels.quizUnit})`;
 
     document.querySelectorAll('.province-btn:not(.mode-btn)').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.code === provinceCode);
@@ -801,7 +801,7 @@ function selectNationwideQuiz() {
     if (COUNTRY_CONFIG.hierarchy.hasProvinces) {
         state.currentRegions = state.provincesGeo.features;
         document.getElementById('current-province-name').textContent =
-            `${COUNTRY_CONFIG.labels.nationwideLabel} (${state.currentRegions.length} ${COUNTRY_CONFIG.labels.quizUnit})`;
+            `${COUNTRY_CONFIG.labels.nationwideLabel} (${state.currentRegions.length}개 ${COUNTRY_CONFIG.labels.quizUnit})`;
 
         d3.select('#municipalities-layer').style('display', 'none');
         d3.select('#provinces-layer').style('display', 'none');
@@ -824,7 +824,7 @@ function selectNationwideQuiz() {
         }
         
         document.getElementById('current-province-name').textContent =
-            `${COUNTRY_CONFIG.name} (${state.currentRegions.length} ${COUNTRY_CONFIG.labels.quizUnit})`;
+            `${COUNTRY_CONFIG.name} (${state.currentRegions.length}개 ${COUNTRY_CONFIG.labels.quizUnit})`;
 
         // First reset all paths and mark them as inactive
         d3.selectAll('.municipality-path')
@@ -1400,7 +1400,7 @@ function handleCompletion() {
 
     document.getElementById('completion-message').innerHTML = `
         <strong>${regionTitle}</strong>의<br>
-        ${total} ${COUNTRY_CONFIG.labels.quizUnit}를 모두 맞추셨습니다!<br>
+        ${total}개 ${COUNTRY_CONFIG.labels.quizUnit}를 모두 맞추셨습니다!<br>
         <span style="color: var(--accent-cyan); font-size: 22px; font-weight: 700;">
             ${minutes}분 ${seconds}초
         </span>

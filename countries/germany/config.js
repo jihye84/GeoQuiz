@@ -33,7 +33,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '독일 핵심 5대 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '핵심 5대 도시',
             }
         },
@@ -57,7 +57,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '독일 연방주',
-                quizUnit: '개 주',
+                quizUnit: '주',
                 nationwideLabel: '전체 주',
             },
             provinces: null
@@ -85,7 +85,7 @@ var COUNTRY_CONFIG = {
             },
             labels: {
                 sidebarTitle: '독일 주요 도시',
-                quizUnit: '개 도시',
+                quizUnit: '도시',
                 nationwideLabel: '전체 도시',
             },
             provinces: null
