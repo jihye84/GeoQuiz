@@ -14,11 +14,13 @@ var COUNTRY_CONFIG = {
             label: '이지 모드 (핵심 5개 주)',
             dataFiles: {
                 regions: 'countries/usa/states.json',
+                baseRegions: 'countries/usa/states.json',
                 provinces: null,
                 descriptions: 'countries/usa/descriptions.js',
             },
             topoConfig: {
                 regions: { objectName: 'states' },
+                baseRegions: { objectName: 'states' },
                 provinces: null,
             },
             hierarchy: {

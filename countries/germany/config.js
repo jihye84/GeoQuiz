@@ -15,11 +15,13 @@ var COUNTRY_CONFIG = {
             label: '이지 모드 (핵심 5대 도시)',
             dataFiles: {
                 regions: 'countries/germany/cities.json',
+                baseRegions: 'countries/germany/regions.json',
                 descriptions: 'countries/germany/cities-descriptions.js',
                 provinces: null
             },
             topoConfig: {
                 regions: null,
+                baseRegions: null,
                 provinces: null
             },
             hierarchy: {
@@ -65,11 +67,13 @@ var COUNTRY_CONFIG = {
             label: '독일 25대 주요/역사 도시 퀴즈',
             dataFiles: {
                 regions: 'countries/germany/cities.json',
+                baseRegions: 'countries/germany/regions.json',
                 descriptions: 'countries/germany/cities-descriptions.js',
                 provinces: null
             },
             topoConfig: {
                 regions: null,
+                baseRegions: null,
                 provinces: null
             },
             hierarchy: {
