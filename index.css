@@ -834,8 +834,8 @@ body {
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-xl);
     padding: 30px;
-    max-width: 800px;
-    width: 90%;
+    max-width: 900px;
+    width: 95%;
     max-height: 95vh;
     overflow-y: auto;
     text-align: center;
@@ -1121,7 +1121,7 @@ body {
     bottom: 180px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1500;
+    z-index: 900;
     padding: 18px 40px;
     font-family: var(--font-family);
     font-size: 22px;
@@ -1256,14 +1256,14 @@ body {
 
 /* ===== Country Selector ===== */
 .country-select {
-    max-width: 800px;
+    max-width: 900px;
     width: 95%;
-    padding: 20px;
+    padding: 24px;
 }
 
 .country-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
     margin-top: 16px;
 }
@@ -1284,14 +1284,19 @@ body {
 }
 
 .country-card:hover {
-    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    border-color: var(--accent-cyan);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.country-card:active {
-    transform: translateY(0);
+.country-flag {
+    width: 52px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .country-emoji {
@@ -1313,14 +1318,25 @@ body {
 }
 
 /* Responsive Country Grid for tiny screens */
-@media (max-width: 600px), (max-height: 700px) {
+@media (max-width: 800px) {
     .country-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 500px), (max-height: 700px) {
+    .country-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 8px;
         margin-top: 12px;
     }
     .country-card {
         padding: 8px 4px;
         border-radius: 8px;
+    }
+    .country-flag {
+        width: 40px;
+        height: 28px;
+        margin-bottom: 6px;
     }
     .country-emoji {
         font-size: 28px;

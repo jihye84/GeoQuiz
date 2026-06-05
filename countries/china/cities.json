@@ -13,7 +13,8 @@
       "properties": {
         "code": "PEK",
         "name_ko": "베이징",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -28,7 +29,8 @@
       "properties": {
         "code": "PVG",
         "name_ko": "상하이",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -43,7 +45,8 @@
       "properties": {
         "code": "CAN",
         "name_ko": "광저우",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -58,7 +61,8 @@
       "properties": {
         "code": "SZX",
         "name_ko": "선전",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -73,7 +77,8 @@
       "properties": {
         "code": "CTU",
         "name_ko": "청두",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -88,7 +93,8 @@
       "properties": {
         "code": "CKG",
         "name_ko": "충칭",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -103,7 +109,8 @@
       "properties": {
         "code": "XIY",
         "name_ko": "시안",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -118,7 +125,8 @@
       "properties": {
         "code": "HGH",
         "name_ko": "항저우",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -133,7 +141,8 @@
       "properties": {
         "code": "WUH",
         "name_ko": "우한",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -148,7 +157,8 @@
       "properties": {
         "code": "NKG",
         "name_ko": "난징",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -163,7 +173,8 @@
       "properties": {
         "code": "TSN",
         "name_ko": "톈진",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -178,7 +189,8 @@
       "properties": {
         "code": "TAO",
         "name_ko": "칭다오",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -193,7 +205,8 @@
       "properties": {
         "code": "XMN",
         "name_ko": "샤먼",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -208,7 +221,8 @@
       "properties": {
         "code": "DLC",
         "name_ko": "다롄",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -223,7 +237,8 @@
       "properties": {
         "code": "HRB",
         "name_ko": "하얼빈",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -238,7 +253,8 @@
       "properties": {
         "code": "CSX",
         "name_ko": "창사",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -253,7 +269,8 @@
       "properties": {
         "code": "CGO",
         "name_ko": "정저우",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -268,7 +285,8 @@
       "properties": {
         "code": "KMG",
         "name_ko": "쿤밍",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -283,7 +301,8 @@
       "properties": {
         "code": "URC",
         "name_ko": "우루무치",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -298,7 +317,8 @@
       "properties": {
         "code": "LXA",
         "name_ko": "라싸",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     }
   ]

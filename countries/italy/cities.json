@@ -13,7 +13,8 @@
       "properties": {
         "code": "ROM",
         "name_ko": "로마",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -28,7 +29,8 @@
       "properties": {
         "code": "MIL",
         "name_ko": "밀라노",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -43,7 +45,8 @@
       "properties": {
         "code": "VCE",
         "name_ko": "베네치아",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -58,7 +61,8 @@
       "properties": {
         "code": "FLR",
         "name_ko": "피렌체",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -73,7 +77,8 @@
       "properties": {
         "code": "NAP",
         "name_ko": "나폴리",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -88,7 +93,8 @@
       "properties": {
         "code": "GOA",
         "name_ko": "제노바",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -103,7 +109,8 @@
       "properties": {
         "code": "TRN",
         "name_ko": "토리노",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -118,7 +125,8 @@
       "properties": {
         "code": "BLQ",
         "name_ko": "볼로냐",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -133,7 +141,8 @@
       "properties": {
         "code": "VRN",
         "name_ko": "베로나",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -148,7 +157,8 @@
       "properties": {
         "code": "PMO",
         "name_ko": "팔레르모",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -163,7 +173,8 @@
       "properties": {
         "code": "CTA",
         "name_ko": "카타니아",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -178,7 +189,8 @@
       "properties": {
         "code": "CAG",
         "name_ko": "칼리아리",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -193,7 +205,8 @@
       "properties": {
         "code": "BRI",
         "name_ko": "바리",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -208,7 +221,8 @@
       "properties": {
         "code": "PSA",
         "name_ko": "피사",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -223,7 +237,8 @@
       "properties": {
         "code": "SAY",
         "name_ko": "시에나",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     }
   ]

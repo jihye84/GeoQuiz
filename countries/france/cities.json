@@ -13,7 +13,8 @@
       "properties": {
         "code": "PAR",
         "name_ko": "파리",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -28,7 +29,8 @@
       "properties": {
         "code": "MRS",
         "name_ko": "마르세유",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -43,7 +45,8 @@
       "properties": {
         "code": "LYS",
         "name_ko": "리옹",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -58,7 +61,8 @@
       "properties": {
         "code": "TLS",
         "name_ko": "툴루즈",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -73,7 +77,8 @@
       "properties": {
         "code": "NCE",
         "name_ko": "니스",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -88,7 +93,8 @@
       "properties": {
         "code": "NTE",
         "name_ko": "낭트",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -103,7 +109,8 @@
       "properties": {
         "code": "SXB",
         "name_ko": "스트라스부르",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -118,7 +125,8 @@
       "properties": {
         "code": "MPL",
         "name_ko": "몽펠리에",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -133,7 +141,8 @@
       "properties": {
         "code": "BOD",
         "name_ko": "보르도",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -148,7 +157,8 @@
       "properties": {
         "code": "LIL",
         "name_ko": "릴",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -163,7 +173,8 @@
       "properties": {
         "code": "RNS",
         "name_ko": "렌",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -178,7 +189,8 @@
       "properties": {
         "code": "RHE",
         "name_ko": "랭스",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -193,7 +205,8 @@
       "properties": {
         "code": "LEH",
         "name_ko": "르아브르",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -208,7 +221,8 @@
       "properties": {
         "code": "EBU",
         "name_ko": "생테티엔",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -223,7 +237,8 @@
       "properties": {
         "code": "TLN",
         "name_ko": "툴롱",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -238,7 +253,8 @@
       "properties": {
         "code": "GNB",
         "name_ko": "그르노블",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -253,7 +269,8 @@
       "properties": {
         "code": "DIJ",
         "name_ko": "디종",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -268,7 +285,8 @@
       "properties": {
         "code": "ANE",
         "name_ko": "앙제",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -283,7 +301,8 @@
       "properties": {
         "code": "FNI",
         "name_ko": "님",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -298,7 +317,8 @@
       "properties": {
         "code": "AVN",
         "name_ko": "아비뇽",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     }
   ]

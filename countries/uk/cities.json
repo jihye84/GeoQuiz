@@ -13,7 +13,8 @@
       "properties": {
         "code": "LON",
         "name_ko": "런던",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -28,7 +29,8 @@
       "properties": {
         "code": "EDI",
         "name_ko": "에든버러",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -43,7 +45,8 @@
       "properties": {
         "code": "MAN",
         "name_ko": "맨체스터",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -58,7 +61,8 @@
       "properties": {
         "code": "LIV",
         "name_ko": "리버풀",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -73,7 +77,8 @@
       "properties": {
         "code": "GLA",
         "name_ko": "글래스고",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -88,7 +93,8 @@
       "properties": {
         "code": "CDF",
         "name_ko": "카디프",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -103,7 +109,8 @@
       "properties": {
         "code": "BFS",
         "name_ko": "벨파스트",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -118,7 +125,8 @@
       "properties": {
         "code": "OXF",
         "name_ko": "옥스퍼드",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -133,7 +141,8 @@
       "properties": {
         "code": "CAM",
         "name_ko": "케임브리지",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -148,7 +157,8 @@
       "properties": {
         "code": "BHX",
         "name_ko": "버밍엄",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -163,7 +173,8 @@
       "properties": {
         "code": "YOR",
         "name_ko": "요크",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -178,7 +189,8 @@
       "properties": {
         "code": "STH",
         "name_ko": "스톤헨지",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -193,7 +205,8 @@
       "properties": {
         "code": "BTH",
         "name_ko": "바스",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -208,7 +221,8 @@
       "properties": {
         "code": "SHF",
         "name_ko": "셰필드",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -223,7 +237,8 @@
       "properties": {
         "code": "BRS",
         "name_ko": "브리스틀",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     }
   ]

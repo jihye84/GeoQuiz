@@ -12,7 +12,43 @@ var COUNTRY_CONFIG = {
     dataFiles: {
         regions: 'countries/italy/cities.json',
         baseRegions: 'countries/italy/regions.json',
-        provinces: null,
+            // 모드 (난이도) 설정
+    modes: [
+        {
+            id: 'top5',
+            label: '이지 모드 (핵심 5대 도시)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isTop5 === true
+            },
+            labels: {
+                sidebarTitle: '핵심 5대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '핵심 5대 도시',
+            }
+        },
+        {
+            id: 'all',
+            label: '전체 모드 (15대 도시)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isQuizRegion === true
+            },
+            labels: {
+                sidebarTitle: '15대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '15대 도시',
+            }
+        }
+    ],
+
+    provinces: null,
         descriptions: 'countries/italy/descriptions.js',
     },
     
@@ -20,7 +56,43 @@ var COUNTRY_CONFIG = {
     topoConfig: {
         regions: null,
         baseRegions: null,
-        provinces: null,
+            // 모드 (난이도) 설정
+    modes: [
+        {
+            id: 'top5',
+            label: '이지 모드 (핵심 5대 도시)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isTop5 === true
+            },
+            labels: {
+                sidebarTitle: '핵심 5대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '핵심 5대 도시',
+            }
+        },
+        {
+            id: 'all',
+            label: '전체 모드 (15대 도시)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isQuizRegion === true
+            },
+            labels: {
+                sidebarTitle: '15대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '15대 도시',
+            }
+        }
+    ],
+
+    provinces: null,
     },
     
     // 지역 계층 구조
@@ -39,5 +111,41 @@ var COUNTRY_CONFIG = {
         nationwideLabel: '이탈리아 15대 도시',
     },
     
+        // 모드 (난이도) 설정
+    modes: [
+        {
+            id: 'top5',
+            label: '이지 모드 (핵심 5대 도시)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isTop5 === true
+            },
+            labels: {
+                sidebarTitle: '핵심 5대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '핵심 5대 도시',
+            }
+        },
+        {
+            id: 'all',
+            label: '전체 모드 (15대 도시)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isQuizRegion === true
+            },
+            labels: {
+                sidebarTitle: '15대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '15대 도시',
+            }
+        }
+    ],
+
     provinces: null
 };

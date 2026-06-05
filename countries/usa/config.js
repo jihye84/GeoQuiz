@@ -10,6 +10,22 @@ var COUNTRY_CONFIG = {
     
     modes: [
         {
+            id: 'top5',
+            label: '이지 모드 (핵심 5개 주)',
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'name', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isTop5 === true
+            },
+            labels: {
+                sidebarTitle: '미국 핵심 5개 주',
+                quizUnit: '개 주',
+                nationwideLabel: '핵심 5개 주',
+            }
+        },
+        {
             id: 'states',
             label: '미국 50개 주 퀴즈',
             dataFiles: {

@@ -13,7 +13,8 @@
       "properties": {
         "code": "MAD",
         "name_ko": "마드리드",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -28,7 +29,8 @@
       "properties": {
         "code": "BCN",
         "name_ko": "바르셀로나",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -43,7 +45,8 @@
       "properties": {
         "code": "VLC",
         "name_ko": "발렌시아",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -58,7 +61,8 @@
       "properties": {
         "code": "SVQ",
         "name_ko": "세비야",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -73,7 +77,8 @@
       "properties": {
         "code": "ZAZ",
         "name_ko": "사라고사",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -88,7 +93,8 @@
       "properties": {
         "code": "AGP",
         "name_ko": "말라가",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -103,7 +109,8 @@
       "properties": {
         "code": "MUR",
         "name_ko": "무르시아",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -118,7 +125,8 @@
       "properties": {
         "code": "PMI",
         "name_ko": "팔마",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -133,7 +141,8 @@
       "properties": {
         "code": "LPA",
         "name_ko": "라스팔마스",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -148,7 +157,8 @@
       "properties": {
         "code": "BIO",
         "name_ko": "빌바오",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -163,7 +173,8 @@
       "properties": {
         "code": "ALC",
         "name_ko": "알리칸테",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -178,7 +189,8 @@
       "properties": {
         "code": "ODB",
         "name_ko": "코르도바",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -193,7 +205,8 @@
       "properties": {
         "code": "GRX",
         "name_ko": "그라나다",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -208,7 +221,8 @@
       "properties": {
         "code": "TLD",
         "name_ko": "톨레도",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -223,7 +237,8 @@
       "properties": {
         "code": "SCQ",
         "name_ko": "산티아고 데 콤포스텔라",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     }
   ]

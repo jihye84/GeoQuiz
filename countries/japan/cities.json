@@ -13,7 +13,8 @@
       "properties": {
         "code": "TYO",
         "name_ko": "도쿄",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -28,7 +29,8 @@
       "properties": {
         "code": "OSA",
         "name_ko": "오사카",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -43,7 +45,8 @@
       "properties": {
         "code": "KYO",
         "name_ko": "교토",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -58,7 +61,8 @@
       "properties": {
         "code": "CTS",
         "name_ko": "삿포로",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -73,7 +77,8 @@
       "properties": {
         "code": "FUK",
         "name_ko": "후쿠오카",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": true
       }
     },
     {
@@ -88,7 +93,8 @@
       "properties": {
         "code": "NGO",
         "name_ko": "나고야",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -103,7 +109,8 @@
       "properties": {
         "code": "YOK",
         "name_ko": "요코하마",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -118,7 +125,8 @@
       "properties": {
         "code": "UKB",
         "name_ko": "고베",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -133,7 +141,8 @@
       "properties": {
         "code": "SDJ",
         "name_ko": "센다이",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -148,7 +157,8 @@
       "properties": {
         "code": "HIJ",
         "name_ko": "히로시마",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -163,7 +173,8 @@
       "properties": {
         "code": "OKA",
         "name_ko": "나하",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -178,7 +189,8 @@
       "properties": {
         "code": "NGS",
         "name_ko": "나가사키",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -193,7 +205,8 @@
       "properties": {
         "code": "KMQ",
         "name_ko": "가나자와",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -208,7 +221,8 @@
       "properties": {
         "code": "NRA",
         "name_ko": "나라",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -223,7 +237,8 @@
       "properties": {
         "code": "KIJ",
         "name_ko": "니가타",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -238,7 +253,8 @@
       "properties": {
         "code": "FSZ",
         "name_ko": "시즈오카",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -253,7 +269,8 @@
       "properties": {
         "code": "KOJ",
         "name_ko": "가고시마",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -268,7 +285,8 @@
       "properties": {
         "code": "MYJ",
         "name_ko": "마쓰야마",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -283,7 +301,8 @@
       "properties": {
         "code": "TAK",
         "name_ko": "다카마쓰",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     },
     {
@@ -298,7 +317,8 @@
       "properties": {
         "code": "HKD",
         "name_ko": "하코다테",
-        "isQuizRegion": true
+        "isQuizRegion": true,
+        "isTop5": false
       }
     }
   ]

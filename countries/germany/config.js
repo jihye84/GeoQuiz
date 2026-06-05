@@ -11,6 +11,27 @@ var COUNTRY_CONFIG = {
     // 게임 모드 설정
     modes: [
         {
+            id: 'top5',
+            label: '이지 모드 (핵심 5대 도시)',
+            dataFiles: {
+                regions: 'countries/germany/cities.json',
+                descriptions: 'countries/germany/cities-descriptions.js',
+                provinces: null
+            },
+            hierarchy: {
+                hasProvinces: false,
+                provinceCodeDigits: 0,
+                regionCodeField: 'code', 
+                regionNameField: 'name_ko',
+                filter: (f) => f.properties.isTop5 === true
+            },
+            labels: {
+                sidebarTitle: '독일 핵심 5대 도시',
+                quizUnit: '개 도시',
+                nationwideLabel: '핵심 5대 도시',
+            }
+        },
+        {
             id: 'states',
             label: '독일 16개 연방주 퀴즈',
             dataFiles: {

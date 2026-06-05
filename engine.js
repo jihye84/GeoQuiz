@@ -116,6 +116,8 @@ function init() {
     
     document.getElementById('country-change-btn').addEventListener('click', () => {
         document.getElementById('country-selector').classList.remove('hidden');
+        document.getElementById('view-results-btn').classList.add('hidden');
+        document.getElementById('completion-modal').classList.add('hidden');
     });
     
     setupEventListeners();
@@ -221,6 +223,10 @@ async function loadCountryData() {
             state.municipalitiesGeo = topojson.feature(regionsData, regionsData.objects[COUNTRY_CONFIG.topoConfig.regions.objectName]);
         } else {
             state.municipalitiesGeo = regionsData;
+        }
+
+        if (COUNTRY_CONFIG.hierarchy && COUNTRY_CONFIG.hierarchy.filter) {
+            state.municipalitiesGeo.features = state.municipalitiesGeo.features.filter(COUNTRY_CONFIG.hierarchy.filter);
         }
 
         if (COUNTRY_CONFIG.dataFiles.baseRegions) {
