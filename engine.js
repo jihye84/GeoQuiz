@@ -1198,10 +1198,26 @@ function showInfoPopup(name, description, color, nativeName, onDismiss) {
 
     popup.classList.remove('hidden', 'fade-out');
 
-    const dismiss = () => dismissInfoPopup(onDismiss);
+    let popupTimeout;
     
-    // 4초 후 팝업 닫기
-    setTimeout(dismiss, 4000);
+    const dismissHandler = () => {
+        if (!state.isShowingInfo) return;
+        clearTimeout(popupTimeout);
+        document.removeEventListener('keydown', dismissHandler);
+        document.removeEventListener('pointerdown', dismissHandler);
+        dismissInfoPopup(onDismiss);
+    };
+    
+    // 4초 후 자동으로 닫기
+    popupTimeout = setTimeout(dismissHandler, 4000);
+
+    // 즉시 닫기 위한 이벤트 리스너 (팝업을 띄운 클릭 이벤트가 바로 캡처되지 않도록 약간 지연)
+    setTimeout(() => {
+        if (state.isShowingInfo) {
+            document.addEventListener('keydown', dismissHandler);
+            document.addEventListener('pointerdown', dismissHandler);
+        }
+    }, 50);
 }
 
 
