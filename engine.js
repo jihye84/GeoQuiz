@@ -672,38 +672,53 @@ function setupEventListeners() {
     const mapContainer = document.getElementById('map-container');
     const tooltip = document.getElementById('map-tooltip');
 
+    let currentMapHoverTarget = null;
+    let mapRect = mapContainer.getBoundingClientRect();
+    window.addEventListener('resize', () => { mapRect = mapContainer.getBoundingClientRect(); });
+
     d3.select('#map-svg').on('pointermove', function (event) {
         const target = event.target;
-        if (isMapPath(target) &&
-            target.classList.contains('quiz-region') &&
-            !state.matched.has(target.dataset.code)) {
-            // Highlight
-            d3.selectAll('.highlight').classed('highlight', false);
-            d3.select(target).classed('highlight', true);
+        
+        // Update tooltip position if visible
+        if (!tooltip.classList.contains('hidden')) {
+            tooltip.style.left = (event.clientX - mapRect.left + 16) + 'px';
+            tooltip.style.top = (event.clientY - mapRect.top - 40) + 'px';
+        }
 
-            // Show tooltip with "?"
-            if (state.selectedCapsule) {
-                tooltip.textContent = '여기?';
+        if (currentMapHoverTarget === target) return;
+        
+        if (currentMapHoverTarget) {
+            d3.select(currentMapHoverTarget).classed('highlight', false);
+            currentMapHoverTarget = null;
+        }
+
+        if (isMapPath(target) && target.dataset.code) {
+            if (target.classList.contains('quiz-region') && !state.matched.has(target.dataset.code)) {
+                d3.select(target).classed('highlight', true);
+                currentMapHoverTarget = target;
+
+                if (state.selectedCapsule) {
+                    tooltip.textContent = '여기?';
+                    tooltip.classList.remove('hidden');
+                    tooltip.style.left = (event.clientX - mapRect.left + 16) + 'px';
+                    tooltip.style.top = (event.clientY - mapRect.top - 40) + 'px';
+                }
+            } else if (state.matched.has(target.dataset.code)) {
+                tooltip.textContent = target.dataset.name;
                 tooltip.classList.remove('hidden');
-                const rect = mapContainer.getBoundingClientRect();
-                tooltip.style.left = (event.clientX - rect.left + 16) + 'px';
-                tooltip.style.top = (event.clientY - rect.top - 40) + 'px';
+                tooltip.style.left = (event.clientX - mapRect.left + 16) + 'px';
+                tooltip.style.top = (event.clientY - mapRect.top - 40) + 'px';
             }
-        } else if (isMapPath(target) && target.dataset.code && state.matched.has(target.dataset.code)) {
-            // Show name for matched regions
-            tooltip.textContent = target.dataset.name;
-            tooltip.classList.remove('hidden');
-            const rect = mapContainer.getBoundingClientRect();
-            tooltip.style.left = (event.clientX - rect.left + 16) + 'px';
-            tooltip.style.top = (event.clientY - rect.top - 40) + 'px';
         } else {
-            d3.selectAll('.highlight').classed('highlight', false);
             tooltip.classList.add('hidden');
         }
     });
 
     d3.select('#map-svg').on('pointerleave', function () {
-        d3.selectAll('.highlight').classed('highlight', false);
+        if (currentMapHoverTarget) {
+            d3.select(currentMapHoverTarget).classed('highlight', false);
+            currentMapHoverTarget = null;
+        }
         tooltip.classList.add('hidden');
     });
 
@@ -1022,6 +1037,10 @@ function cleanupDrag() {
     if (state.dragState.capsule) {
         state.dragState.capsule.classList.remove('dragging');
     }
+    if (currentDragHoverTarget) {
+        d3.select(currentDragHoverTarget).classed('drag-hover', false);
+        currentDragHoverTarget = null;
+    }
     d3.selectAll('.drag-hover').classed('drag-hover', false);
     state.dragState = {
         isDragging: false,
@@ -1033,33 +1052,27 @@ function cleanupDrag() {
     };
 }
 
+let currentDragHoverTarget = null;
+
 function updateDragHighlight(clientX, clientY) {
-    // Remove previous highlights
-    d3.selectAll('.drag-hover').classed('drag-hover', false);
-
-    // Temporarily hide ghost to find element underneath
-    if (state.dragState.ghostEl) {
-        state.dragState.ghostEl.style.display = 'none';
-    }
-
     const elementUnder = document.elementFromPoint(clientX, clientY);
 
-    if (state.dragState.ghostEl) {
-        state.dragState.ghostEl.style.display = '';
+    if (elementUnder === currentDragHoverTarget) return;
+
+    if (currentDragHoverTarget) {
+        d3.select(currentDragHoverTarget).classed('drag-hover', false);
+        currentDragHoverTarget = null;
     }
 
     if (elementUnder && isMapPath(elementUnder) &&
         elementUnder.classList.contains('quiz-region') &&
         !state.matched.has(elementUnder.dataset.code)) {
         d3.select(elementUnder).classed('drag-hover', true);
+        currentDragHoverTarget = elementUnder;
     }
 }
 
 function endDrag(clientX, clientY) {
-    // Hide ghost to find element underneath
-    if (state.dragState.ghostEl) {
-        state.dragState.ghostEl.style.display = 'none';
-    }
 
     const elementUnder = document.elementFromPoint(clientX, clientY);
 
@@ -1187,95 +1200,15 @@ function showInfoPopup(name, description, color, nativeName, onDismiss) {
 
     const dismiss = () => dismissInfoPopup(onDismiss);
     
-    // 팝업이 최소 4초는 표시되도록 보장 (TTS가 너무 빨리 끝나거나 에러가 나도 바로 사라지지 않음)
-    const showTime = Date.now();
-    let isDismissed = false;
-    
-    const safeDismiss = () => {
-        if (isDismissed) return;
-        isDismissed = true;
-        const elapsed = Date.now() - showTime;
-        const remaining = Math.max(0, 4000 - elapsed);
-        setTimeout(dismiss, remaining);
-    };
-
-    // 만약 콜백이 안 불릴 경우를 대비한 넉넉한 45초 폴백 (긴 설명 대비)
-    setTimeout(safeDismiss, 45000);
-
-    const nativeLang = COUNTRY_CONFIG.ttsLang || 'ko';
-
-    // Step 1: Read Native Name, Step 2: Read Korean Description
-    const playDesc = () => {
-        playGoogleTTS(description, 'ko', safeDismiss, () => {
-            playBrowserTTS(description, 'ko-KR', safeDismiss);
-        });
-    };
-
-    playGoogleTTS(nativeName, nativeLang, playDesc, () => {
-        // Fallback to browser
-        playBrowserTTS(nativeName, nativeLang === 'ko' ? 'ko-KR' : (nativeLang === 'en' ? 'en-US' : nativeLang), playDesc);
-    });
+    // 4초 후 팝업 닫기
+    setTimeout(dismiss, 4000);
 }
 
-function playGoogleTTS(text, lang, onEnd, onError) {
-    try {
-        let handled = false;
-        const safeOnEnd = () => { if (!handled) { handled = true; onEnd(); } };
-        const safeOnError = () => { if (!handled) { handled = true; onError(); } };
 
-        const audio = new Audio();
-        const encoded = encodeURIComponent(text);
-        audio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`;
-        audio.onended = safeOnEnd;
-        audio.onerror = safeOnError;
-        audio.play().catch(safeOnError);
-    } catch (e) {
-        onError();
-    }
-}
-
-function playBrowserTTS(text, lang, onEnd) {
-    try {
-        window.speechSynthesis.cancel();
-        
-        let handled = false;
-        const safeOnEnd = () => { if (!handled) { handled = true; onEnd(); } };
-
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = lang;
-        utterance.rate = 1.0;
-        utterance.pitch = 1.05;
-
-        const voices = window.speechSynthesis.getVoices();
-        const preferredVoice = voices.find(v => v.lang.startsWith(lang.split('-')[0]) && v.name.includes('Google'))
-            || voices.find(v => v.lang.startsWith(lang.split('-')[0]));
-        if (preferredVoice) utterance.voice = preferredVoice;
-
-        utterance.onend = safeOnEnd;
-        utterance.onerror = safeOnEnd;
-        window.speechSynthesis.speak(utterance);
-        
-        // 크롬 브라우저의 긴 문장 끊김 방지용 타이머 (10초마다 pause/resume)
-        const chromeBugFix = setInterval(() => {
-            if (!window.speechSynthesis.speaking) {
-                clearInterval(chromeBugFix);
-            } else {
-                window.speechSynthesis.pause();
-                window.speechSynthesis.resume();
-            }
-        }, 10000);
-        
-    } catch (e) {
-        setTimeout(onEnd, 2000);
-    }
-}
 
 function dismissInfoPopup(onDismiss) {
     if (!state.isShowingInfo) return;
     state.isShowingInfo = false;
-
-    // Stop any playing audio
-    try { window.speechSynthesis.cancel(); } catch (e) {}
 
     const popup = document.getElementById('info-popup');
     popup.classList.add('fade-out');
