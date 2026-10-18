@@ -17,6 +17,7 @@ var COUNTRY_CONFIG = {
                 baseRegions: 'countries/usa/states.json',
                 provinces: null,
                 descriptions: 'countries/usa/descriptions.js',
+                images: 'countries/usa/images.js',
             },
             topoConfig: {
                 regions: { objectName: 'states' },
@@ -43,6 +44,7 @@ var COUNTRY_CONFIG = {
                 regions: 'countries/usa/states.json',
                 provinces: null,
                 descriptions: 'countries/usa/descriptions.js',
+                images: 'countries/usa/images.js',
             },
             topoConfig: {
                 regions: { objectName: 'states' },
@@ -69,6 +71,7 @@ var COUNTRY_CONFIG = {
                 baseRegions: 'countries/usa/states.json',
                 provinces: null,
                 descriptions: 'countries/usa/cities-descriptions.js',
+                images: 'countries/usa/cities-images.js',
             },
             topoConfig: {
                 regions: null,
@@ -97,6 +100,7 @@ var COUNTRY_CONFIG = {
                 baseRegions: 'countries/usa/states.json',
                 provinces: null,
                 descriptions: 'countries/usa/cities-descriptions.js',
+                images: 'countries/usa/cities-images.js',
             },
             topoConfig: {
                 regions: null,
@@ -125,6 +129,7 @@ var COUNTRY_CONFIG = {
                 baseRegions: 'countries/usa/states.json',
                 provinces: null,
                 descriptions: 'countries/usa/cities-descriptions.js',
+                images: 'countries/usa/cities-images.js',
             },
             topoConfig: {
                 regions: null,

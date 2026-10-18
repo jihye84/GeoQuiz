@@ -17,6 +17,7 @@ var COUNTRY_CONFIG = {
                 regions: 'countries/germany/cities.json',
                 baseRegions: 'countries/germany/regions.json',
                 descriptions: 'countries/germany/cities-descriptions.js',
+                images: 'countries/germany/cities-images.js',
                 provinces: null
             },
             topoConfig: {
@@ -43,6 +44,7 @@ var COUNTRY_CONFIG = {
             dataFiles: {
                 regions: 'countries/germany/regions.json',
                 descriptions: 'countries/germany/descriptions.js',
+                images: 'countries/germany/images.js',
                 provinces: null
             },
             topoConfig: {
@@ -69,6 +71,7 @@ var COUNTRY_CONFIG = {
                 regions: 'countries/germany/cities.json',
                 baseRegions: 'countries/germany/regions.json',
                 descriptions: 'countries/germany/cities-descriptions.js',
+                images: 'countries/germany/cities-images.js',
                 provinces: null
             },
             topoConfig: {

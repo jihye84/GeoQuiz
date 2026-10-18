@@ -1467,3 +1467,48 @@ body {
     opacity: 1;
     transform: translate(-50%, 0);
 }
+
+/* ===== 정답 팝업 대표 사진 ===== */
+.info-popup-card {
+    max-height: 92vh;
+    max-height: 92dvh;
+    display: flex;
+    flex-direction: column;
+}
+.info-popup-photo {
+    position: relative;
+    width: 100%;
+    height: clamp(120px, 30vh, 240px);
+    height: clamp(120px, 30dvh, 240px);
+    flex-shrink: 0;
+    background: rgba(148, 163, 184, 0.12);
+    overflow: hidden;
+}
+.info-popup-photo.hidden { display: none; }
+.info-popup-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.info-popup-photo.loaded img { opacity: 1; }
+.info-popup-credit {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #f1f5f9;
+    font-size: 11px;
+    text-decoration: none;
+    line-height: 1.6;
+}
+.info-popup-body { overflow: hidden; }
+@media (max-height: 520px) {
+    .info-popup-body { padding: 14px 20px 12px; }
+    .info-popup-name { font-size: 20px; margin-bottom: 6px; }
+    .info-popup-desc { font-size: 15px; margin-bottom: 6px; }
+}

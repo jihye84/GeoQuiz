@@ -14,6 +14,7 @@ var COUNTRY_CONFIG = {
         baseRegions: 'countries/africa/regions.json',
         provinces: null,
         descriptions: 'countries/africa/descriptions.js',
+        images: 'countries/africa/images.js',
     },
     
     // TopoJSON 변환 설정

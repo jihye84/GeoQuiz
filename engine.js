@@ -258,6 +258,18 @@ async function loadCountryData() {
             state.provincesOuterMesh = null;
         }
         
+        // Load representative photos (REGION_IMAGES)
+        window.REGION_IMAGES = undefined;
+        if (COUNTRY_CONFIG.dataFiles.images) {
+            await new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = COUNTRY_CONFIG.dataFiles.images + '?v=' + Date.now();
+                script.onload = resolve;
+                script.onerror = resolve; // 사진 없이도 계속
+                document.head.appendChild(script);
+            });
+        }
+
         // Load descriptions
         if (COUNTRY_CONFIG.dataFiles.descriptions) {
             await new Promise((resolve) => {
@@ -280,6 +292,7 @@ async function loadCountryData() {
         
         // Reset state
         state.matched = new Set();
+        state.matchedColors = {};
         state.selectedCapsule = null;
         state.isNationwideMode = false;
         state.currentProvince = null;
@@ -657,6 +670,10 @@ function setupEventListeners() {
     d3.select('#map-svg').on('click', function (event) {
         const target = event.target;
         if (isMapPath(target) && target.dataset.code) {
+            if (state.matched.has(target.dataset.code) && !state.selectedCapsule) {
+                showMatchedRegionInfo(target.dataset.code);
+                return;
+            }
             handleMapRegionClick(target, target.dataset.code);
         }
     });
@@ -748,6 +765,7 @@ function selectProvince(provinceCode) {
 
     state.currentProvince = provinceCode;
     state.matched = new Set();
+    state.matchedColors = {};
     state.selectedCapsule = null;
     clearTimer();
     state.startTime = Date.now();
@@ -791,6 +809,7 @@ function selectProvince(provinceCode) {
 
     zoomToProvince(provinceCode);
     generateCapsules();
+    preloadRegionImages();
     updateProgress();
     document.getElementById('capsules-instruction').classList.remove('hidden');
 }
@@ -798,6 +817,7 @@ function selectProvince(provinceCode) {
 function selectNationwideQuiz() {
     state.currentProvince = 'ALL';
     state.matched = new Set();
+    state.matchedColors = {};
     state.selectedCapsule = null;
     state.isNationwideMode = true;
     clearTimer();
@@ -867,6 +887,7 @@ function selectNationwideQuiz() {
     
     zoomToProvince('ALL');
     generateCapsules();
+    preloadRegionImages();
     updateProgress();
     document.getElementById('capsules-instruction').classList.remove('hidden');
 }
@@ -991,8 +1012,14 @@ function generateCapsules() {
 // ========== Capsule Interaction (Single Pointer) ==========
 
 function handleCapsulePointerDown(e, capsule) {
-    // Ignore if already matched
-    if (capsule.classList.contains('matched')) return;
+    // 이미 맞춘 이름표를 누르면 설명과 사진을 다시 보여 줌
+    if (capsule.classList.contains('matched')) {
+        if (!state.isShowingInfo) {
+            e.stopPropagation();
+            showMatchedRegionInfo(capsule.dataset.code);
+        }
+        return;
+    }
 
     // Only track the FIRST pointer (single touch)
     if (state.activePointerId !== null) return;
@@ -1225,6 +1252,10 @@ function handleCorrectMatch(code) {
         ? REGION_DESCRIPTIONS[code]
         : `${regionName}에 대해 알아보세요!`;
 
+    state.matchedColors = state.matchedColors || {};
+    state.matchedColors[code] = fillColor;
+    state.popupCode = code;
+
     showInfoPopup(regionName, description, fillColor, nativeName, () => {
         if (state.matched.size === state.currentRegions.length) {
             clearTimer();
@@ -1242,21 +1273,25 @@ function showInfoPopup(name, description, color, nativeName, onDismiss) {
     document.getElementById('info-popup-name').textContent = name;
     document.getElementById('info-popup-desc').textContent = description;
     document.getElementById('info-popup-color-bar').style.background = color;
+    const hasPhoto = setInfoPopupPhoto(state.popupCode, name);
+    state.popupCode = null;
 
     popup.classList.remove('hidden', 'fade-out');
 
     let popupTimeout;
     
-    const dismissHandler = () => {
+    const dismissHandler = (e) => {
         if (!state.isShowingInfo) return;
+        // 사진 출처 링크를 누를 때는 닫지 않음
+        if (e && e.target && e.target.closest && e.target.closest('#info-popup-credit')) return;
         clearTimeout(popupTimeout);
         document.removeEventListener('keydown', dismissHandler);
         document.removeEventListener('pointerdown', dismissHandler);
         dismissInfoPopup(onDismiss);
     };
     
-    // 4초 후 자동으로 닫기
-    popupTimeout = setTimeout(dismissHandler, 4000);
+    // 자동으로 닫기 (사진이 있으면 조금 더 오래 보여 줌)
+    popupTimeout = setTimeout(dismissHandler, hasPhoto ? 7000 : 4000);
 
     // 즉시 닫기 위한 이벤트 리스너 (팝업을 띄운 클릭 이벤트가 바로 캡처되지 않도록 약간 지연)
     setTimeout(() => {
@@ -1268,6 +1303,65 @@ function showInfoPopup(name, description, color, nativeName, onDismiss) {
 }
 
 
+
+// ========== 대표 사진 (위키미디어 공용) ==========
+
+function regionImageFile(code) {
+    return (typeof REGION_IMAGES !== 'undefined' && REGION_IMAGES && code != null)
+        ? REGION_IMAGES[code] : null;
+}
+
+function commonsThumbUrl(file, width) {
+    return 'https://commons.wikimedia.org/wiki/Special:FilePath/' +
+        encodeURIComponent(file) + '?width=' + width;
+}
+
+function setInfoPopupPhoto(code, name) {
+    const box = document.getElementById('info-popup-photo');
+    const img = document.getElementById('info-popup-img');
+    const credit = document.getElementById('info-popup-credit');
+    const file = regionImageFile(code);
+    box.classList.remove('loaded');
+    img.onload = img.onerror = null;
+    if (!file) {
+        box.classList.add('hidden');
+        img.removeAttribute('src');
+        return false;
+    }
+    const width = (window.devicePixelRatio || 1) > 1.5 ? 960 : 640;
+    img.alt = name + ' 대표 사진';
+    img.onload = () => box.classList.add('loaded');
+    img.onerror = () => box.classList.add('hidden');
+    img.src = commonsThumbUrl(file, width);
+    credit.href = 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_'));
+    box.classList.remove('hidden');
+    return true;
+}
+
+// 퀴즈를 시작하면 이번 판의 사진을 미리 받아 둔다 (팝업이 바로 뜨도록)
+function preloadRegionImages() {
+    if (typeof REGION_IMAGES === 'undefined' || !REGION_IMAGES) return;
+    const codeField = COUNTRY_CONFIG.hierarchy.regionCodeField;
+    const width = (window.devicePixelRatio || 1) > 1.5 ? 960 : 640;
+    const files = (state.currentRegions || [])
+        .map(r => regionImageFile(r.properties[codeField]))
+        .filter(Boolean).slice(0, 80);
+    state.preloaded = files.map(f => { const im = new Image(); im.decoding = 'async'; im.src = commonsThumbUrl(f, width); return im; });
+}
+
+// 이미 맞춘 지역(지도 또는 이름표)을 누르면 설명과 사진을 다시 보여 준다
+function showMatchedRegionInfo(code) {
+    if (state.isShowingInfo || !state.matched.has(code)) return;
+    const codeField = COUNTRY_CONFIG.hierarchy.regionCodeField;
+    const nameField = COUNTRY_CONFIG.hierarchy.regionNameField;
+    const region = state.currentRegions.find(r => r.properties[codeField] === code);
+    const name = region ? region.properties[nameField] : code;
+    const description = (typeof REGION_DESCRIPTIONS !== 'undefined' && REGION_DESCRIPTIONS[code])
+        ? REGION_DESCRIPTIONS[code] : `${name}에 대해 알아보세요!`;
+    const color = (state.matchedColors && state.matchedColors[code]) || '#06b6d4';
+    state.popupCode = code;
+    showInfoPopup(name, description, color, name, null);
+}
 
 function dismissInfoPopup(onDismiss) {
     if (!state.isShowingInfo) return;

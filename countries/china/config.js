@@ -14,6 +14,7 @@ var COUNTRY_CONFIG = {
         baseRegions: 'countries/china/regions.json',
         provinces: null,
         descriptions: 'countries/china/descriptions.js',
+        images: 'countries/china/images.js',
     },
     
     // TopoJSON 변환 설정 (모두 GeoJSON)

@@ -13,6 +13,7 @@ var COUNTRY_CONFIG = {
         regions: 'countries/korea/regions.json',
         provinces: 'countries/korea/provinces.json',
         descriptions: 'countries/korea/descriptions.js',
+        images: 'countries/korea/images.js',
     },
     
     // TopoJSON 변환 설정

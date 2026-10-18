@@ -14,6 +14,7 @@ var COUNTRY_CONFIG = {
         baseRegions: 'countries/japan/regions.json',
         provinces: null,
         descriptions: 'countries/japan/descriptions.js',
+        images: 'countries/japan/images.js',
     },
     
     // TopoJSON 변환 설정 (모두 GeoJSON)

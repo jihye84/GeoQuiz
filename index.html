@@ -48,7 +48,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css?v=2">
+    <link rel="stylesheet" href="index.css?v=3">
 </head>
 <body>
     <!-- Loading Overlay -->
@@ -152,6 +152,10 @@
     <!-- Info Popup Card (shown after correct match) -->
     <div id="info-popup" class="info-popup hidden">
         <div class="info-popup-card">
+            <div class="info-popup-photo hidden" id="info-popup-photo">
+                <img id="info-popup-img" alt="" decoding="async">
+                <a id="info-popup-credit" class="info-popup-credit" target="_blank" rel="noopener">📷 위키미디어 공용</a>
+            </div>
             <div class="info-popup-color-bar" id="info-popup-color-bar"></div>
             <div class="info-popup-body">
                 <h3 class="info-popup-name" id="info-popup-name"></h3>
@@ -241,6 +245,6 @@
     <!-- Scripts -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
-    <script src="engine.js?v=5"></script>
+    <script src="engine.js?v=6"></script>
 </body>
 </html>
