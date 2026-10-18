@@ -650,14 +650,7 @@ function setupEventListeners() {
 
     document.getElementById('zoom-reset-btn').addEventListener('click', (e) => {
         e.stopPropagation();
-        if (state.isNationwideMode) {
-            zoomToProvince('ALL');
-        } else if (state.currentProvince) {
-            zoomToProvince(state.currentProvince);
-        } else {
-            state.svg.transition().duration(600).ease(d3.easeCubicInOut)
-                .call(state.zoom.transform, d3.zoomIdentity);
-        }
+        resetZoomView();
     });
 
     // Map click handler (delegated to SVG - works for both path types)
@@ -878,6 +871,57 @@ function selectNationwideQuiz() {
     document.getElementById('capsules-instruction').classList.remove('hidden');
 }
 
+function resetZoomView() {
+    if (state.isNationwideMode) {
+        zoomToProvince('ALL');
+    } else if (state.currentProvince) {
+        zoomToProvince(state.currentProvince);
+    } else {
+        state.svg.transition().duration(600).ease(d3.easeCubicInOut)
+            .call(state.zoom.transform, d3.zoomIdentity);
+    }
+}
+
+// ========== Zoom-out Hint (멀리 떨어진 도시용) ==========
+// COUNTRY_CONFIG.zoomOutHints = { 코드: '안내 문구' }
+// 해당 이름을 골랐을 때 그 위치가 지금 화면 밖이면 안내를 띄우고 전체 보기로 축소한다.
+function maybeShowZoomOutHint(code) {
+    const hints = COUNTRY_CONFIG.zoomOutHints;
+    if (!hints || !hints[code]) return;
+
+    const target = document.querySelector(`#map-svg [data-code="${CSS.escape(code)}"]`);
+    const svgEl = document.getElementById('map-svg');
+    if (!target || !svgEl) return;
+
+    const t = target.getBoundingClientRect();
+    const v = svgEl.getBoundingClientRect();
+    const cx = t.left + t.width / 2, cy = t.top + t.height / 2;
+    const margin = 12;
+    const inView = cx >= v.left + margin && cx <= v.right - margin &&
+                   cy >= v.top + margin && cy <= v.bottom - margin;
+    if (inView) return;
+
+    showMapToast(hints[code]);
+    resetZoomView();
+}
+
+function showMapToast(message) {
+    let toast = document.getElementById('map-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'map-toast';
+        toast.className = 'map-toast';
+        const host = document.getElementById('map-svg').parentElement;
+        host.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.remove('show');
+    void toast.offsetWidth; // 애니메이션 다시 시작
+    toast.classList.add('show');
+    clearTimeout(state.mapToastTimer);
+    state.mapToastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
 function zoomToProvince(provinceCode) {
     const { width, height } = COUNTRY_CONFIG.mapConfig;
 
@@ -984,6 +1028,7 @@ function handleGlobalPointerMove(e) {
     if (!state.dragState.isDragging && distance > 10) {
         state.dragState.isDragging = true;
         state.dragState.capsule.classList.add('dragging');
+        maybeShowZoomOutHint(state.dragState.code);
 
         // Deselect any previously selected capsule
         document.querySelectorAll('.capsule.selected').forEach(c => c.classList.remove('selected'));
@@ -1103,6 +1148,8 @@ function handleCapsuleClick(capsule) {
     // Select this capsule
     capsule.classList.add('selected');
     state.selectedCapsule = capsule;
+
+    maybeShowZoomOutHint(capsule.dataset.code);
 }
 
 function handleMapRegionClick(pathElement, regionCode) {

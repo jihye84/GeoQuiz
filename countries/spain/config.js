@@ -75,5 +75,10 @@ var COUNTRY_CONFIG = {
         }
     ],
 
+    // 이름을 골랐는데 그 도시가 지금 화면 밖에 있으면 지도를 축소하며 보여 줄 힌트
+    zoomOutHints: {
+        LPA: '🔍 라스팔마스는 본토에서 멀리 떨어진 섬에 있어요! 지도를 넓게 볼게요',
+    },
+
     provinces: null
 };

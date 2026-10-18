@@ -1439,3 +1439,31 @@ body {
     cursor: default;
 }
 
+
+/* ===== 축소 힌트 토스트 ===== */
+.map-toast {
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    transform: translate(-50%, -8px);
+    max-width: calc(100% - 32px);
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(56, 189, 248, 0.6);
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    word-break: keep-all;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 20;
+}
+.map-toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
