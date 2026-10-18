@@ -1311,9 +1311,61 @@ function regionImageFile(code) {
         ? REGION_IMAGES[code] : null;
 }
 
+// 작은 MD5 (위키미디어 썸네일 경로 계산용)
+function md5hex(str) {
+    const bytes = new TextEncoder().encode(str);
+    const n = bytes.length;
+    const words = new Uint32Array(((n + 8) >>> 6 << 4) + 16);
+    for (let i = 0; i < n; i++) words[i >> 2] |= bytes[i] << ((i % 4) * 8);
+    words[n >> 2] |= 0x80 << ((n % 4) * 8);
+    words[words.length - 2] = (n * 8) >>> 0;
+    words[words.length - 1] = Math.floor(n / 0x20000000);
+    const S = [7, 12, 17, 22, 5, 9, 14, 20, 4, 11, 16, 23, 6, 10, 15, 21];
+    const K = new Uint32Array(64);
+    for (let i = 0; i < 64; i++) K[i] = Math.floor(Math.abs(Math.sin(i + 1)) * 4294967296);
+    let a0 = 0x67452301, b0 = 0xefcdab89, c0 = 0x98badcfe, d0 = 0x10325476;
+    for (let o = 0; o < words.length; o += 16) {
+        let a = a0, b = b0, c = c0, d = d0;
+        for (let i = 0; i < 64; i++) {
+            let f, g;
+            if (i < 16) { f = (b & c) | (~b & d); g = i; }
+            else if (i < 32) { f = (d & b) | (~d & c); g = (5 * i + 1) % 16; }
+            else if (i < 48) { f = b ^ c ^ d; g = (3 * i + 5) % 16; }
+            else { f = c ^ (b | ~d); g = (7 * i) % 16; }
+            const tmp = d; d = c; c = b;
+            const sum = (a + f + K[i] + words[o + g]) >>> 0;
+            const s = S[(i >> 4) * 4 + (i % 4)];
+            b = (b + ((sum << s) | (sum >>> (32 - s)))) >>> 0;
+            a = tmp;
+        }
+        a0 = (a0 + a) >>> 0; b0 = (b0 + b) >>> 0; c0 = (c0 + c) >>> 0; d0 = (d0 + d) >>> 0;
+    }
+    return [a0, b0, c0, d0].map(x => {
+        let h = '';
+        for (let i = 0; i < 4; i++) h += ((x >>> (i * 8)) & 0xff).toString(16).padStart(2, '0');
+        return h;
+    }).join('');
+}
+
+// 위키미디어 캐시 서버의 썸네일 주소 (리다이렉트 없이 바로 받음)
 function commonsThumbUrl(file, width) {
+    const name = file.replace(/ /g, '_');
+    const h = md5hex(name);
+    const enc = encodeURIComponent(name);
+    const thumb = /\.tiff?$/i.test(name) ? `lossy-page1-${width}px-${enc}.jpg`
+        : /\.svg$/i.test(name) ? `${width}px-${enc}.png`
+        : `${width}px-${enc}`;
+    return `https://upload.wikimedia.org/wikipedia/commons/thumb/${h[0]}/${h.slice(0, 2)}/${enc}/${thumb}`;
+}
+
+// 썸네일이 안 될 때(원본이 작을 때 등) 쓰는 예비 주소
+function commonsFallbackUrl(file, width) {
     return 'https://commons.wikimedia.org/wiki/Special:FilePath/' +
         encodeURIComponent(file) + '?width=' + width;
+}
+
+function photoWidth() {
+    return (window.devicePixelRatio || 1) > 1.5 ? 960 : 500;
 }
 
 function setInfoPopupPhoto(code, name) {
@@ -1328,10 +1380,14 @@ function setInfoPopupPhoto(code, name) {
         img.removeAttribute('src');
         return false;
     }
-    const width = (window.devicePixelRatio || 1) > 1.5 ? 960 : 640;
+    const width = photoWidth();
     img.alt = name + ' 대표 사진';
     img.onload = () => box.classList.add('loaded');
-    img.onerror = () => box.classList.add('hidden');
+    img.onerror = () => {
+        // 첫 주소가 안 되면 한 번만 예비 주소로 다시 시도
+        img.onerror = () => box.classList.add('hidden');
+        img.src = commonsFallbackUrl(file, width);
+    };
     img.src = commonsThumbUrl(file, width);
     credit.href = 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_'));
     box.classList.remove('hidden');
@@ -1342,7 +1398,7 @@ function setInfoPopupPhoto(code, name) {
 function preloadRegionImages() {
     if (typeof REGION_IMAGES === 'undefined' || !REGION_IMAGES) return;
     const codeField = COUNTRY_CONFIG.hierarchy.regionCodeField;
-    const width = (window.devicePixelRatio || 1) > 1.5 ? 960 : 640;
+    const width = photoWidth();
     const files = (state.currentRegions || [])
         .map(r => regionImageFile(r.properties[codeField]))
         .filter(Boolean).slice(0, 80);
